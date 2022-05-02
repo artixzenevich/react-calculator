@@ -1,0 +1,24 @@
+.button {
+    height: 80px;
+    width: 80px;
+    font-size: 34px;
+    border: 1px solid #8E8D8F;
+    border-radius: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #1C191C;
+}
+
+.controls-button {
+    background-color: #C9C8CC;
+}
+
+.orange-button {
+    background-color: #FB9717;
+    color: #fff;
+}
+
+.null-button {
+    /* упс... */
+    width: 160px !important; 
+}
