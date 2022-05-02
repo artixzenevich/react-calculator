@@ -18,7 +18,6 @@ class Logic {
         sign: "+/-",
         equal: "=",
         allClear: "AC",
-        clear: "C",
       };
     }
   
@@ -73,9 +72,6 @@ class Logic {
         return this.handleAllClearOperation();
       }
   
-      if (input === this.OperationEnum.clear) {
-        return this.handleClearOperation();
-      }
   
       if (input === this.OperationEnum.equal) {
         return this.handleEqualOperation(input);
@@ -147,9 +143,6 @@ class Logic {
       return this.allClear();
     }
   
-    handleClearOperation() {
-      return this.clear();
-    }
   
     perform(operation) {
       if (this.repeatNumber !== null) {
@@ -263,18 +256,7 @@ class Logic {
         ? "0"
         : (parseFloat(number) * -1).toString();
     }
-  
-    clear() {
-      this.previousInput = null;
-      this.previousNumber = null;
-      this.previousOperation = null;
-      this.repeatNumber = null;
-      this.repeatOperation = null;
-      this.clearable = false;
-  
-      return this.number;
-    }
-  
+    
     allClear() {
       this.number = "";
       this.previousInput = null;
